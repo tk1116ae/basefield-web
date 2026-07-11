@@ -421,7 +421,7 @@
       home: () => `
         <div class="topline"><h1 class="brand">BASE FIELD</h1><span class="chip">2026</span></div>
         <section class="hero">
-          <div class="team"><div class="logo">RH</div><div><h2>Royal Honeys</h2><small>2026シーズン</small></div></div>
+          <div class="team"><div class="logo">BF</div><div><h2>BASE FIELD</h2><small>2026シーズン</small></div></div>
           <div><strong>10勝 7敗 1分</strong><br><small>勝率 .588</small></div>
         </section>
         <div class="stats-grid">
@@ -437,9 +437,9 @@
         </div>
         <h3 class="section-title">ランキング</h3>
         <div class="card">
-          <div class="row"><span>打率 1位</span><b>長島 .333</b></div>
-          <div class="row"><span>OPS 1位</span><b>山田 .912</b></div>
-          <div class="row"><span>防御率 1位</span><b>佐藤 2.10</b></div>
+          <div class="row"><span>打率 1位</span><b>ふうと .333</b></div>
+          <div class="row"><span>OPS 1位</span><b>翔平 .912</b></div>
+          <div class="row"><span>防御率 1位</span><b>海晴 2.10</b></div>
         </div>
       `,
       game: () => `
@@ -471,7 +471,7 @@
         const step = battingSteps[state.battingStep % battingSteps.length];
         return `
           <div class="topline"><h1 class="brand">打者成績入力</h1><span class="chip">1 / 12人目</span></div>
-          <div class="big-prompt"><div class="kicker">1番 長島 / 項目 ${state.battingStep + 1} / 18</div><div class="question">${step}は？</div></div>
+          <div class="big-prompt"><div class="kicker">1番 ふうと / 項目 ${state.battingStep + 1} / 18</div><div class="question">${step}は？</div></div>
           <div class="keypad">${[0,1,2,3,4,5,6,"＋"].map(v => `<button class="key" data-next-batting>${v}</button>`).join("")}</div>
           <button class="button secondary" style="margin-top:12px" data-prev-batting>戻る</button>
           <div class="card" style="margin-top:14px">
@@ -484,7 +484,7 @@
         const step = pitchingSteps[state.pitchingStep % pitchingSteps.length];
         return `
           <div class="topline"><h1 class="brand">投手成績入力</h1><span class="chip">1 / 2人目</span></div>
-          <div class="big-prompt"><div class="kicker">長島 / 項目 ${state.pitchingStep + 1} / 14</div><div class="question">${step}</div>${state.pitchingStep >= 9 && state.pitchingStep <= 12 ? `<p class="muted" style="margin-top:8px">この項目はスキップ可能です</p>` : ""}</div>
+          <div class="big-prompt"><div class="kicker">海晴 / 項目 ${state.pitchingStep + 1} / 14</div><div class="question">${step}</div>${state.pitchingStep >= 9 && state.pitchingStep <= 12 ? `<p class="muted" style="margin-top:8px">この項目はスキップ可能です</p>` : ""}</div>
           <div class="keypad">${[0,1,2,3,4,5,6,7,"＋"].map(v => `<button class="key" data-next-pitching>${v}</button>`).join("")}</div>
           ${state.pitchingStep >= 9 && state.pitchingStep <= 12 ? `<button class="button secondary" style="margin-top:12px" data-next-pitching>未入力でスキップ</button>` : ""}
           <button class="button" data-screen="review" style="margin-top:12px">確認へ</button>
@@ -496,9 +496,9 @@
         <h3 class="section-title">スコア</h3>${scoreTable()}
         <h3 class="section-title">打者成績</h3>
         <div class="card">
-          <div class="row"><span>1 長島</span><b>3打数2安打 1打点</b></div>
-          <div class="row"><span>2 山田</span><b>4打数1安打</b></div>
-          <div class="row"><span>3 佐藤</span><b>3打数0安打 四球1</b></div>
+          <div class="row"><span>1 ふうと</span><b>3打数2安打 1打点</b></div>
+          <div class="row"><span>2 翔平</span><b>4打数1安打</b></div>
+          <div class="row"><span>3 海晴</span><b>3打数0安打 四球1</b></div>
         </div>
         <h3 class="section-title">チーム合計</h3>
         <div class="stats-grid">
@@ -517,31 +517,31 @@
         </section>
         <h3 class="section-title">Today's Highlight</h3>
         <div class="card">
-          <div class="row"><span>長島</span><b>2安打 1打点 / 勝利投手</b></div>
-          <div class="row"><span>山田</span><b>3回1失点でセーブ</b></div>
+          <div class="row"><span>ふうと</span><b>2安打 1打点 / 勝利投手</b></div>
+          <div class="row"><span>翔平</span><b>3回1失点でセーブ</b></div>
         </div>
         <button class="button" data-screen="home" style="margin-top:14px">ホームへ</button>
       `,
       stats: () => `
         <div class="topline"><h1 class="brand">成績</h1><span class="chip">2026</span></div>
         <div class="card">
-          <div class="row"><b>長島</b><span>AVG .333 / OPS .912</span></div>
-          <div class="row"><b>山田</b><span>AVG .298 / OPS .801</span></div>
-          <div class="row"><b>佐藤</b><span>ERA 2.10 / SO 18</span></div>
+          <div class="row"><b>ふうと</b><span>AVG .333 / OPS .912</span></div>
+          <div class="row"><b>翔平</b><span>AVG .298 / OPS .801</span></div>
+          <div class="row"><b>海晴</b><span>ERA 2.10 / SO 18</span></div>
         </div>
       `,
       players: () => `
         <div class="topline"><h1 class="brand">選手</h1><span class="chip">12人</span></div>
         <div class="card">
-          <div class="row"><b>#16 長島</b><span>SS / 3B / P</span></div>
-          <div class="row"><b>#7 山田</b><span>CF</span></div>
-          <div class="row"><b>#11 佐藤</b><span>C / 1B</span></div>
+          <div class="row"><b>#16 ふうと</b><span>SS / 3B / P</span></div>
+          <div class="row"><b>#7 翔平</b><span>CF</span></div>
+          <div class="row"><b>#11 海晴</b><span>C / 1B</span></div>
         </div>
       `,
       settings: () => `
         <div class="topline"><h1 class="brand">設定</h1><span class="chip">v1.0</span></div>
         <div class="card">
-          <div class="row"><span>チーム設定</span><b>Royal Honeys</b></div>
+          <div class="row"><span>チーム設定</span><b>BASE FIELD</b></div>
           <div class="row"><span>防御率換算</span><b>7回制</b></div>
           <div class="row"><span>チーム共有</span><b>Supabase</b></div>
           <div class="row"><span>CSV出力</span><b>予定</b></div>
