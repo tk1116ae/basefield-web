@@ -8,6 +8,7 @@ on:
       - "index.html"
       - "CNAME"
       - "privacy/**"
+      - "support/**"
       - "terms/**"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
