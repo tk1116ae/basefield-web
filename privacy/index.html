@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>プライバシーポリシー | BASE FIELD</title>
   <meta name="description" content="BASE FIELDのプライバシーポリシーです。取得する情報、利用目的、データ管理、問い合わせ先について説明します。">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
   <style>
     :root {
       color-scheme: light;
@@ -164,7 +165,7 @@
   <main>
     <div class="wrap">
       <div class="meta">
-        <div>最終更新日: 2026年7月20日</div>
+        <div>最終更新日: 2026年8月20日</div>
         <div>運営者: Tatsuki Nagashima</div>
         <div>問い合わせ先: <a href="mailto:royalhoneys2026@gmail.com">royalhoneys2026@gmail.com</a></div>
       </div>
@@ -179,6 +180,7 @@
           <li>打順、守備位置、出場選手、打撃成績、投手成績、守備に関する記録などの成績情報</li>
           <li>チームログイン、招待、権限管理などに関する情報</li>
           <li>チーム共有の権限判定に使う匿名の端末アカウント識別子</li>
+          <li>代表者・管理者が任意で登録するメールアドレスとメール認証情報</li>
           <li>ユーザーが任意で追加した写真、画像、メモ、設定情報</li>
           <li>BASE FIELD Proの購入状態など、アプリ内課金の利用状況</li>
         </ul>
@@ -204,7 +206,7 @@
 
         <h2>5. データの保存・管理</h2>
         <p>BASE FIELDは、端末内の保存領域およびバックエンドサービスとしてSupabaseを利用して、チーム情報、選手情報、試合情報、成績情報、ログイン関連情報などを保存・管理する場合があります。</p>
-        <p>チームPASSおよび管理用PASSの文字列そのものは端末内に保存し、Supabaseには照合用に変換したハッシュ値のみを送信します。ハッシュ値から元のPASSを表示する機能はありません。</p>
+        <p>チーム参加にはTコード、選手本人へのリンクにはMコードを利用します。参加者へ共通PASSの入力は求めません。Mコードは一度使用すると無効になり、有効期限があります。代表者・管理者の復帰には、登録したメールアドレスへ送信する確認コードを利用します。</p>
         <p>データは、アプリ機能の提供に必要な範囲で管理します。ユーザー自身がCSV出力や共有機能を利用した場合、そのファイルや共有先での管理はユーザーの操作と共有先の環境に従います。</p>
 
         <h2>6. ユーザーによる問い合わせ・削除依頼</h2>
